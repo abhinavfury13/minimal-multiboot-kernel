@@ -6,7 +6,7 @@ header_start:
     dd header_end - header_start ; header length
     ; checksum
     dd 0x100000000 - (0xe85250d6 + 0 + (header_end - header_start))
-
+    
     ; required end tag
     ; dw is define word (16-bit)
     dw 0    ; type
