@@ -1,0 +1,16 @@
+[package]
+name = "os-in-rust"
+version = "0.1.0"
+edition = "2018"
+authors = ["Abhinav Ramnath"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type =  ["staticlib"]
+
+# We disable unwinding of stack and abort on panic instead
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
