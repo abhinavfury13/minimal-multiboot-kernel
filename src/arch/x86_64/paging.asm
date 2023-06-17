@@ -22,6 +22,8 @@ set_up_page_tables:
     ;map each pd entry to huge page 2MiB
     mov ecx, 0 ;counter
 
+; Flat Mapping 2MiB pages
+
 .map_pd_table:
     ; map each entry of pd table to a huge page of size 2MiB, whose address is 2Mib * ecx
     mov eax, 0x200000           ; 2MiB
@@ -42,7 +44,7 @@ enable_paging:
 
     ; enable Physical Address Extension in CR4 register
     mov eax, cr4
-    or eax, 1 << 5 ; Set 5th bit
+    or eax, 1 << 5 ; Set PAE bit
     mov cr4, eax
 
     ; set the long mode bit in the EFER MSR
