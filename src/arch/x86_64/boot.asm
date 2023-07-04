@@ -63,6 +63,6 @@ pdp_table:
 pd_table:
     resb 4096
 stack_bottom:
-    ;allocates 64 bytes, resb allocates 1 byte
-    resb 64
+    ;increase the size of the stack
+    resb 4096 * 4
 stack_top:

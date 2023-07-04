@@ -15,7 +15,7 @@ rust_os := target/$(target)/debug/libos_in_rust.a
 # we are using the compiler-builtins-mem functions which contains all the memcpy, memmove etc. functions with no_mangle so linker can see them
 rust_compiler_flags := -Z build-std=core,compiler_builtins -Z build-std-features=compiler-builtins-mem
 
-.PHONY: all clean run iso
+.PHONY: all clean run iso debug
 
 all: $(kernel)
 
@@ -25,6 +25,9 @@ clean:
 
 run: $(iso)
 	@qemu-system-x86_64 -cdrom $(iso)
+
+debug: $(iso)
+	@qemu-system-x86_64 -s -S -cdrom $(iso)
 
 iso: $(iso)
 
