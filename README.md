@@ -71,10 +71,12 @@ make run
 A thorough overview of your project's directory structure:
 ```
 /
-├── bootloader/    # Contains bootloader code
-├── kernel/        # Kernel source code
-├── scripts/       # Build/run scripts
-└── README.md      # Project README
+├── src/
+│ ├── interrupt.rs # Contains interrupt handling code
+│ ├── gdt.rs # Code for Global Descriptor Table (GDT)
+│ ├── lib.rs # Common functionalities and library code
+│ └── arch/
+│ └── x86_64/ #Contains the bootloader
 ```
 
 Explain the purpose and content of each significant directory or file.
