@@ -19,13 +19,11 @@ This is my attempt to learn Rust and Kernel Development and the intricate detail
 
 ## Introduction
 
-In-depth details about your kernel project:
 - This is a learning project for me to better understand the inner workings of kernel development
 - This kernel targets the x86 architecture
 
 ## Features
 
-A comprehensive list of features your minimal kernel supports, such as:
 - Basic memory management (page tables, heap allocation)
 - Interrupt handling for keyboard and timer inputs
 - Simple command-line interface or shell.
@@ -68,7 +66,6 @@ make run
 
 ## Project Structure
 
-A thorough overview of your project's directory structure:
 ```
 /
 ├── src/
@@ -79,7 +76,6 @@ A thorough overview of your project's directory structure:
 │ └── x86_64/ #Contains the bootloader
 ```
 
-Explain the purpose and content of each significant directory or file.
 
 ## Acknowledgements
 
